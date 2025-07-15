@@ -1,1 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Papita con Miga</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      color: #333;
+      background: radial-gradient(circle at top left, #3119a7, #2d7650, #3752d7);
+    }
+    header {
+      background: #2e7d32;
+      color: white;
+      padding: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    header img {
+      height: 80px;
+    }
+    header h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 2rem;
+      margin: 0;
+    }
+    nav a {
+      margin: 0 1rem;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .hero {
+      position: relative;
+      height: 400px;
+      overflow: hidden;
+    }
+    .hero img.bg {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transform: rotateX(10deg) scale(1.05);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+      border-bottom-left-radius: 100% 30%;
+      border-bottom-right-radius: 100% 30%;
+    }
+    .hero .logo-overlay {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      width: 120px;
+      opacity: 0.95;
+    }
+    section {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h3 {
+      color: #484746;
+    }
+    .logo {
+      display: block;
+      margin: 2rem auto;
+      width: 200px;
+    }
+    button {
+      background: #43a047;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      margin-top: 0.5rem;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    footer {
+      background: #2e7d32;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="img/escudo.png" alt="Escudo Casa Grande">
+    <h1>La Papita con Miga</h1>
+    <nav>
+      <a href="#resumen">Resumen</a>
+      <a href="#historia">Historia</a>
+      <a href="#guardianas">Guardianas</a>
+      <a href="#musica">Música</a>
+      <a href="#ordenanza">Ordenanza</a>
+      <a href="#aniversario">Aniversario</a>
+    </nav>
+  </header>
 
+  <div class="hero">
+    <img src="img/fondo.png" alt="Monumento Papita con Miga" class="bg">
+    <img src="img/logo.png" alt="Logo Papita con Miga" class="logo-overlay">
+  </div>
+
+       <section id="resumen" style="background: linear-gradient(135deg, #1b5e20, #4caf50); border-radius: 50px; padding: 2rem; box-shadow: 0 6px 18px rgba(0,0,0,0.3);">
+  <div style="display: flex; align-items: center; gap: 2rem; flex-wrap: wrap; justify-content: space-between;">
+    <img src="img/seño.png" alt="Papita con Miga" style="max-width: 220px; border-radius: 50%; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
+    <div style="flex: 1; background-color: #2e7d32; padding: 1.5rem 2rem; border-radius: 50px; color: white;">
+      <h3 style="font-family: 'Alfa Slab One', cursive; text-align: left; font-size: 2rem; margin-bottom: 1rem;">NUESTRO PLATO BANDERA</h3>
+      <p id="textoResumen" style="font-size: 1.1rem; text-align: justify;">Es un delicioso potaje típico de Casa Grande, elaborado a base de papa amarilla con miga de pan, acompañado con guiso de carne, condimentos y sazón afroperuana.</p>
+      <button onclick="leer('textoResumen')" style="margin-top: 1rem; background-color: #388e3c;">🔊 Escuchar</button>
+    </div>
+  </div>
+</section>
+
+  <section id="historia">
+    <h3>Historia</h3>
+    <p id="textoHistoria">La papita con miga nace en las cocinas afrodescendientes del distrito de Casa Grande. Es una receta que ha sido transmitida de generación en generación por mujeres guardianas del sabor local.</p>
+    <button onclick="leer('textoHistoria')">🔊 Escuchar</button>
+  </section>
+
+  <section id="guardianas">
+    <h3>Las Guardianas</h3>
+    <p id="textoGuardianas">Son mujeres locales que resguardan y difunden la preparación tradicional de este plato, participando en festividades y ferias gastronómicas del distrito.</p>
+    <button onclick="leer('textoGuardianas')">🔊 Escuchar</button>
+  </section>
+
+  <section id="musica">
+    <h3>Canción Oficial</h3>
+    <audio controls>
+      <source src="musica.mp3" type="audio/mp3">
+      Tu navegador no soporta el reproductor de audio.
+    </audio>
+  </section>
+
+  <section id="ordenanza">
+    <h3>Ordenanza Municipal N.º 007-2018-MDCG</h3>
+    <p id="textoOrdenanza">Mediante esta ordenanza, la Municipalidad de Casa Grande declara a la Papita con Miga como plato bandera del distrito, estableciendo su celebración oficial cada tercer domingo de agosto.</p>
+    <button onclick="leer('textoOrdenanza')">🔊 Escuchar</button>
+  </section>
+
+  <section id="aniversario">
+    <h3>Primer Aniversario</h3>
+    <p id="textoAniversario">El primer aniversario de este nombramiento se celebró con una feria gastronómica y cultural, donde participaron las guardianas, colegios locales, y agrupaciones culturales.</p>
+    <button onclick="leer('textoAniversario')">🔊 Escuchar</button>
+  </section>
+
+  <footer>
+    Municipalidad Distrital de Casa Grande - Tierra Dulce | © 2025
+  </footer>
+
+  <script>
+    function leer(id) {
+      const texto = document.getElementById(id).textContent;
+      const voz = new SpeechSynthesisUtterance(texto);
+      voz.lang = 'es-PE';
+      window.speechSynthesis.speak(voz);
+    }
+  </script>
+</body>
+</html>
